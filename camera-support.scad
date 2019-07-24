@@ -31,8 +31,8 @@ module cameraHole() {
 
 module pillar() {
      difference() {
-	  translate([0,HOLE_CENTER_TO_SIDE,HOLE_CENTER_TO_SIDE]) rotate(a=90, v=[0,1,0]) cylinder(h=PILLAR_HEIGHT,r=PILLAR_RADIUS, center=true, $fn=200);
-	  translate([0,HOLE_CENTER_TO_SIDE,HOLE_CENTER_TO_SIDE]) rotate(a=90, v=[0,1,0]) cylinder(h=PILLAR_HEIGHT + 0.1,r=HOLE_RADIUS, center=true, $fn=200);
+	  translate([PANEL_THICKNESS,HOLE_CENTER_TO_SIDE,HOLE_CENTER_TO_SIDE]) rotate(a=90, v=[0,1,0]) cylinder(h=PILLAR_HEIGHT,r=PILLAR_RADIUS, center=false, $fn=200);
+	  translate([PANEL_THICKNESS,HOLE_CENTER_TO_SIDE,HOLE_CENTER_TO_SIDE]) rotate(a=90, v=[0,1,0]) cylinder(h=PILLAR_HEIGHT + 0.1,r=HOLE_RADIUS, center=false, $fn=200);
      }
 }
 
