@@ -1,6 +1,7 @@
 PANEL_SIZE = 36;
 PANEL_THICKNESS = 4.2;
 BETWEEN_HOLES_DISTANCE = 28.8;
+CAMERA_HOLE_RADIUS = 14.5;
 HOLE_RADIUS = 1.5;
 PILLAR_RADIUS = 3;
 PILLAR_HEIGHT = 3.6;
@@ -26,7 +27,7 @@ module hole() {
 }
 
 module cameraHole() {
-     translate([0, PANEL_SIZE/2, PANEL_SIZE/2]) rotate(a=90, v=[0,1,0]) cylinder(h=10,r=BETWEEN_HOLES_DISTANCE/2, center=true, $fn=200);
+     translate([0, PANEL_SIZE/2, PANEL_SIZE/2]) rotate(a=90, v=[0,1,0]) cylinder(h=10,r=CAMERA_HOLE_RADIUS, center=true, $fn=200);
 }
 
 module pillar() {
